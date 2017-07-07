@@ -51,6 +51,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
    FILES
    InitStatus.msg
+   CmdEllipse.msg
 #   Message2.msg
  )
 
@@ -234,3 +235,26 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 add_executable(uav5 src/uav5.cpp)
 target_link_libraries(uav5 ${catkin_LIBRARIES})
 add_dependencies(uav5 px4package_generate_messages_cpp)
+
+include_directories(include ${catkin_INCLUDE_DIRS})
+
+add_executable(convoy_bot_1_ctrl src/convoy_bot_1_ctrl.cpp)
+target_link_libraries(convoy_bot_1_ctrl ${catkin_LIBRARIES})
+add_dependencies(convoy_bot_1_ctrl px4package_generate_messages_cpp)
+
+add_executable(convoy_bot_2_ctrl src/convoy_bot_2_ctrl.cpp)
+target_link_libraries(convoy_bot_2_ctrl ${catkin_LIBRARIES})
+add_dependencies(convoy_bot_2_ctrl px4package_generate_messages_cpp)
+
+add_executable(convoy_bot_3_ctrl src/convoy_bot_3_ctrl.cpp)
+target_link_libraries(convoy_bot_3_ctrl ${catkin_LIBRARIES})
+add_dependencies(convoy_bot_3_ctrl px4package_generate_messages_cpp)
+
+add_executable(convoy_bot_4_ctrl src/convoy_bot_4_ctrl.cpp)
+target_link_libraries(convoy_bot_4_ctrl ${catkin_LIBRARIES})
+add_dependencies(convoy_bot_4_ctrl px4package_generate_messages_cpp)
+
+add_executable(convoy_bot_5_ctrl src/convoy_bot_5_ctrl.cpp)
+target_link_libraries(convoy_bot_5_ctrl ${catkin_LIBRARIES})
+add_dependencies(convoy_bot_5_ctrl px4package_generate_messages_cpp)
+
